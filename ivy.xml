@@ -1,0 +1,12 @@
+<ivy-module version="2.0">
+    <info organisation="homework" module="test" />
+
+    <dependencies>
+        <dependency org="com.google.guava" name="guava" rev="12.0.1"/>
+        <dependency org="testGroup" name="testArtifact" rev="1.0"/>
+
+        <!-- excluding source and javadoc jars -->
+        <exclude org="*" ext="*" type="source"/>
+        <exclude org="*" ext="*" type="javadoc"/>
+    </dependencies>
+</ivy-module>
