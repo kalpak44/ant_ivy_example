@@ -2,7 +2,7 @@
 <settings defaultResolver="chained"/>
 <resolvers>
     <chain name="chained" returnFirst="true">
-        <ibiblio name="my-nexus" root="http://localhost:8082/nexus/content/repositories/repoId/"/>
+        <ibiblio name="my-nexus" root="http://localhost:8082/nexus/content/repositories/repoId/" pattern="[organisation]/[module]/[revision]/[module]-[revision].[ext]"/>
         <ibiblio name="java-net-maven2" root="http://central.maven.org/maven2/"/>
         <ibiblio name="java-net-maven1" root="http://central.maven.org/maven1/"/>
     </chain>

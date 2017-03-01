@@ -1,9 +1,14 @@
 <ivy-module version="2.0">
     <info organisation="homework" module="test" />
 
+	<configurations>
+        <conf name="compile"  description="Required to compile application"/>
+        <conf name="runtime"  description="Additional run-time dependencies"/>
+    </configurations>
+	
     <dependencies>
         <dependency org="com.google.guava" name="guava" rev="12.0.1"/>
-        <dependency org="testGroup" name="testArtifact" rev="1.0"/>
+        <dependency org="testGroup" name="testArtifact" rev="1.0" conf="compile->default"/>
 
         <!-- excluding source and javadoc jars -->
         <exclude org="*" ext="*" type="source"/>

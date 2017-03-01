@@ -70,7 +70,8 @@
 	
 	<!-- ivy to get dependencies and copy to project lib folder automatically -->
     <target name="resolve-dependencies" description="--> retrieve dependencies with ivy" depends="install-ivy">
-        <ivy:retrieve pattern="${lib.dir}/[organisation]/[type]/[artifact]-[type]-[revision].[ext]" />
+        <ivy:retrieve conf="compile" pattern="${base.lib}/build/[artifact]-[revision].[ext]" />
+        <ivy:retrieve conf="runtime" pattern="${base.lib}/runtime/runtime/[artifact]-[revision].[ext]" />
     </target>
 	
 	<!-- ================================= 
